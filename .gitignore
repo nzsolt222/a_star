@@ -1,0 +1,7 @@
+build/
+*.sublime-workspace
+*.sublime-project
+.vimrc
+*.swp
+.ycm_extra_conf.py
+*.pyc
