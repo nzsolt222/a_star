@@ -35,7 +35,7 @@ struct Node : astar::Neighbour<Node *>
     bool accesable;
 };
 ```
-2\. Implement the equal operator.
+2\. Implement the comparison operator.
 ```cpp
 bool operator==(const Node &lhs, const Node &rhs)
 {
