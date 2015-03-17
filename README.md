@@ -20,13 +20,13 @@ You can find many examples under the examples folder.
 | example-0.cpp    | 2D grid  based example           |
 | example-1.cpp    | 2D graph based example           |
 | example-2.cpp    | 3D graph based example           |
-| example-3.cpp    | 2D grid  based example with gui  |
+| example-3.cpp    | 2D graph based example with gui  |
 
 ## Tutorial
 
 ### 2D Graph based searching
 
-1. Let's create a Node and inherit the astart::Neigbour class.
+1\. Let's create a Node and inherit the astart::Neigbour class.
 ```cpp
 struct Node : astar::Neighbour<Node *>
 {
@@ -35,14 +35,14 @@ struct Node : astar::Neighbour<Node *>
     bool accesable;
 };
 ```
-2. Implement the equal operator.
+2\. Implement the equal operator.
 ```cpp
 bool operator==(const Node &lhs, const Node &rhs)
 {
     return lhs.x == rhs.x && lhs.y == rhs.y;
 }
 ```
-3. Create a logic functor
+3\. Create a logic functor.
 ```cpp
 struct logic
 {
@@ -58,7 +58,7 @@ struct logic
     }
 };
 ```
-4. Create our graph
+4\. Create a graph.
 ```cpp
 for (int x = 0; x < 100; ++x)
 {
@@ -93,14 +93,14 @@ for (int x = 0; x < 100; ++x)
     }
 }
 ```
-5. Find the path.
+5\. Find the path.
 ```cpp
 std::vector<Node *> solution =
     astar::find(&graph[0][0], &graph[99][99], logic());
 ```
 
 ### 2D Grid based searching
-1. Create an astar::Grid and your grid structure. 
+1\. Create an astar::Grid and your grid structure. 
 ```cpp
 astar::Grid grid(12, 9);
 char map[12][9] = {
@@ -117,7 +117,7 @@ char map[12][9] = {
     {'|', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '|'},
     {'+', '-', '-', '-', '-', '-', '-', '-', '+'}};
 ```
-2. Set the heuristic(default manhattan), accesable(default true) and the move cost(default 1).
+2\. Set the heuristic(default manhattan), accesable(default true) and the move cost(default 1).
 ```cpp
 grid.set_accesable([&](int x1, int y1, int, int)
                    {
@@ -126,7 +126,7 @@ grid.set_accesable([&](int x1, int y1, int, int)
 // grid.set_heuristic
 // grid.set_move_cost
 ```
-3. Find the path.
+3\. Find the path.
 ```cpp
 std::vector<std::pair<int, int>> solution = grid.find(1, 1, 10, 7);
 ```
