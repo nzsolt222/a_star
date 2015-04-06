@@ -10,6 +10,7 @@ It is an implementation in C++11 of the A-star(A\*) algorithm. This is a header 
     - [2D Grid based searching](#2d-grid-based-searching)
 - [Screenshot](#screenshot)
 - [License](#license)
+- [Credits](#credits)
 
 ## Examples
 
@@ -137,3 +138,8 @@ std::vector<std::pair<int, int>> solution = grid.find(1, 1, 10, 7);
 ## License  
 
 This software is released under the MIT License, see license.txt
+
+## Credits
+Feel free to contact me with any questions!
+
+You can reach me at <nzsolt222@gmail.com>.
